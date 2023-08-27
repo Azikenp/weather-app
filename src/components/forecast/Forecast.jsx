@@ -1,9 +1,30 @@
-import React from 'react'
-import './Forecast.css'
+import React from 'react';
+import {Accordion, 
+    AccordionItem, 
+    AccordionItemButton, 
+    AccordionItemHeading, 
+    AccordionItemPanel} 
+from 'react-accessible-accordion';
+import './Forecast.css';
 
-function Forecast() {
+function Forecast({data}) {
   return (
-    <div>Forecast</div>
+    <>
+        <label className='title'>Daily</label>
+        <Accordion allowZeroExpanded>
+            {data.list.splice(0, 7).map((item, idx) => {
+                <AccordionItem key={idx}>
+                    <AccordionItemHeading>
+                        <AccordionItemButton>
+                            Hello
+                        </AccordionItemButton>
+                    </AccordionItemHeading>
+
+                    <AccordionItemPanel>Hii</AccordionItemPanel>
+                </AccordionItem>
+            })}
+        </Accordion>
+    </>
   )
 }
 
