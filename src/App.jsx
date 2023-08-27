@@ -27,7 +27,7 @@ function App() {
         setCurrentWeather({ city: searchData.label, ...weatherResponse });
         setForcast({ city: searchData.label, ...forecastResponse });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   };
 
   return (
