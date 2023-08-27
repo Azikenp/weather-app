@@ -52,6 +52,7 @@
   height: 30px;
   justify-content: space-between;
   align-items: center;
+  padding-right: 20px;
 }
 
 .daily-details-grid-item label:first-child {
